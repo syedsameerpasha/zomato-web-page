@@ -1,0 +1,57 @@
+*{
+    margin:0;/*to remove basic styling*/
+    padding: 0;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    background-color: #f9fafc;
+}
+
+.navbar{ /*styling navbar*/
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+
+}
+.navbar_brand { /*resize the weights of div*/
+  width:100px;
+}
+.navbar_logo {
+    width:100%;/*occupies 100% width of parent*/
+}
+.nav_item{ /*resize the button and style it by aplying gradient*/
+  background-image: linear-gradient(
+  to right,
+  #ff512f 0%,  /* gradient colors*/
+  #dd2476 51%,
+  #ff512f 100%
+  );
+  color:#fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600; /*inshalls bade hana*/
+
+}
+.nav_item:hover{
+    border:2px solid #FF6767;
+    cursor: pointer;
+}
+
+@media (min-width:768px){
+    .navbar{
+        justify-content: space-between; /*for ipad responsivness*/
+        padding :10px,30px;
+    }
+}
+@media (min-width:1024px){
+    .navbar_brand{
+        width:150px;
+}
+.nav_item{
+    padding:20px;
+    font-size: 20px;
+}
+}
