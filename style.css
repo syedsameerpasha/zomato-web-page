@@ -5,8 +5,9 @@
 
 body{
     font-family: 'Merriweather', serif;
-    background-color: #f9fafc;
+    background-color: #ebf2ff;
 }
+
 
 .navbar{ /*styling navbar*/
   display: flex;
@@ -21,7 +22,7 @@ body{
 .navbar_logo {
     width:100%;/*occupies 100% width of parent*/
 }
-.nav_item{ /*resize the button and style it by aplying gradient*/
+.button_primary{ /*resize the button and style it by aplying gradient*/
   background-image: linear-gradient(
   to right,
   #ff512f 0%,  /* gradient colors*/
@@ -35,23 +36,134 @@ body{
   font-weight: 600; /*inshalls bade hana*/
 
 }
-.nav_item:hover{
+.button_primary:hover{
     border:2px solid #FF6767;
     cursor: pointer;
 }
+.container{ /*if we dont use everything will stick to end and provide margin and padd throughout*/
+   max-width: 100%;
+    padding:20px;
+    margin: 0 auto;
+    
+}
+.hero_image_container{
+   width:100%;/*means alwys 100% of parent div*/
+}
+.hero_image{
+    width: 100%; /*bacuse inside of div only*/  /*mobile should contain 100% width*/
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+   
+}
+.hero_text{
+    font-weight: 800;
+  font-size: 30px;
+  margin: 20px 0;
+  color:#1d3557;
 
+}
+.food_card_description{
+ padding: 15px;   
+}
+.food_card{
+    
+    background-color: #F9F9F9;
+}
+.food_card_image_container{
+    width:100%;
+}
+.food_image{
+    width:100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.explore_menu_text{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #1d3557;
+    font-weight: 800;
+    
+}
 @media (min-width:768px){
+    .explore_menu_lists{
+        margin-top: 45px;
+        display: flex;
+        gap:15px;
+        padding:0 30px ;
+    }
+    .explore_menu_container{ /*parent container*/
+        position: relative;
+    }
+    .explore_menu_gradient_bg{ /*child container*/
+        position:absolute;
+        top: 0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image: linear-gradient(
+            to right,
+            #ff512f 0%,  /* gradient colors*/
+            #dd2476 51%,
+            #ff512f 100%
+            
+            );
+            margin-left: 20px;
+        
+            z-index:-3;
+            transform: skewY(-5deg); /*to tilt division*/
+    }
+    #pizza_card{
+        margin-top: -20px;
+        margin-bottom: 50px;
+    }
+    #burger_card{
+        margin-bottom: 50px;
+        margin-left: 20px;
+    }
+    #icecream_card{
+        margin-bottom: 50px;
+        margin-right: 20px;
+    }
+    
+    
     .navbar{
         justify-content: space-between; /*for ipad responsivness*/
-        padding :10px,30px;
+        padding :10px 30px;
     }
 }
+.hero_container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse; /*reverse the direction in row wise*/
+    align-items:center ;
+}
+
 @media (min-width:1024px){
+    .container{
+        max-width: 70%;
+   }
+    .explore_menu_lists{
+       
+        gap:25px;
+    }
+    
     .navbar_brand{
         width:150px;
 }
-.nav_item{
+.button_primary{
     padding:20px;
     font-size: 20px;
 }
+.hero_description{
+    width: 100%;
+}
+.hero_text{
+    font-size: 50px;
+}
+.explore_menu_text{
+    font-size:48px ;
+}
+
 }
