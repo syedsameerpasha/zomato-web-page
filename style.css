@@ -55,6 +55,7 @@ body{
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
    
 }
+
 .hero_text{
     font-weight: 800;
   font-size: 30px;
@@ -78,12 +79,13 @@ body{
 }
 
 .explore_menu_text{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
     font-size: 30px;
-    color: #1d3557;
     font-weight: 800;
+    color: #1d3557;
+    
     
 }
 @media (min-width:768px){
@@ -92,6 +94,7 @@ body{
         display: flex;
         gap:15px;
         padding:0 30px ;
+        border-radius: 5px;
     }
     .explore_menu_container{ /*parent container*/
         position: relative;
@@ -109,23 +112,41 @@ body{
             #ff512f 100%
             
             );
-            margin-left: 20px;
+            margin-inline-end: 5px;
         
             z-index:-3;
             transform: skewY(-5deg); /*to tilt division*/
     }
     #pizza_card{
-        margin-top: -20px;
+        margin-top: -40px;
         margin-bottom: 50px;
     }
-    #burger_card{
-        margin-bottom: 50px;
-        margin-left: 20px;
+    .food_list_view_more{
+        color:#fff;
+        border-radius: 8px;
+        position:absolute;
+        padding: auto;
+        margin: 30px;
+        display: block;
+        background-image: linear-gradient(
+            to right,
+            #ff512f 0%,  /* gradient colors*/
+            #dd2476 51%,
+            #ff512f 100%
+            
+            );
+
     }
     #icecream_card{
-        margin-bottom: 50px;
-        margin-right: 20px;
+        margin-top: -20px;
+        margin-bottom: 40px;
     }
+    #burger_card{
+        margin-top: -20px;
+        margin-bottom: 40px;
+
+    }
+    
     
     
     .navbar{
